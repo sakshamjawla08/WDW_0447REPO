@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Famous Monument</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: blue;
+        }
+        figure {
+            margin: 0 auto;
+            display: inline-block;
+        }
+        figcaption {
+            margin-top: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Famous Monument</h1>
+
+    <figure>
+        <img src="https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg" alt="The Taj Mahal in Agra, India" width="400" height="250">
+        <figcaption>Figure 1: The Taj Mahal – Agra, India</figcaption>
+    </figure>
+
+</body>
+</html>
