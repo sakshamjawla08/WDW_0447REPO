@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Links &amp; Attributes</title>
+    <title>HTML5 Links &amp; Attributes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             max-width: 800px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 0 16px;
         }
         .spacer {
-            height: 600px; /* Adds vertical space to test same-page jump links */
+            height: 550px;
             background-color: #f8fafc;
             border: 1px dashed #cbd5e1;
             padding: 20px;
@@ -29,19 +29,31 @@
 
 <body id="top">
 
-    <h1>HTML Link Types &amp; Attributes</h1>
+    <h1>HTML5 Link Types &amp; Attributes</h1>
 
-    <!-- 1. INTERNAL LINKS (Same-Page Anchor & Relative Local File) -->
+    <!-- 1. INTERNAL LINKS -->
     <h2>1. Internal Links</h2>
     <ul>
-        <!-- Jumps to an element with id="footer-section" on the same page -->
-        <li><a href="#footer-section">Jump to Bottom Section (Same-Page Anchor)</a></li>
-        
-        <!-- Links to another HTML file in the same project folder -->
-        <li><a href="syllabus.html" title="Open local syllabus file">Go to Syllabus Page (Relative Path)</a></li>
-        
-        <!-- Downloads a local file instead of navigating to it -->
-        <li><a href="notes.pdf" download="WebDev_Notes.pdf">Download Lecture Notes (<code>download</code> attribute)</a></li>
+        <!-- Fragment / Same-Page Anchor Link -->
+        <li>
+            <a href="#bottom-section" title="Scroll down to the footer section">
+                Jump to Bottom Section (Same-Page Anchor)
+            </a>
+        </li>
+
+        <!-- Relative Path to Another Local HTML File -->
+        <li>
+            <a href="timetable.html" title="Open local timetable page">
+                View Class Timetable (Local Relative File)
+            </a>
+        </li>
+
+        <!-- Local File Download Link -->
+        <li>
+            <a href="syllabus.pdf" download="CS_Syllabus_2026.pdf" title="Download PDF file">
+                Download Course Syllabus (<code>download</code> attribute)
+            </a>
+        </li>
     </ul>
 
     <hr>
@@ -49,42 +61,65 @@
     <!-- 2. EXTERNAL LINKS -->
     <h2>2. External Links</h2>
     <p>
-        <!-- target="_blank" opens in a new tab; rel="noopener noreferrer" secures the new tab -->
-        Visit the 
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" 
+        <!-- target="_blank" opens in a new tab; rel="noopener noreferrer" prevents tabnabbing -->
+        Check your markup validity using the 
+        <a href="https://validator.w3.org/" 
            target="_blank" 
            rel="noopener noreferrer" 
-           title="Opens MDN Web Docs in a new tab">
-           MDN HTML Documentation
-        </a> 
-        for official specifications.
+           title="Opens W3C Validator in a new browser tab">
+           W3C Markup Validation Service
+        </a>.
     </p>
 
     <hr>
 
-    <!-- 3. EMAIL & TELEPHONE LINKS -->
-    <h2>3. Email &amp; Phone Links</h2>
+    <!-- 3. EMAIL LINKS -->
+    <h2>3. Email Links (<code>mailto:</code>)</h2>
     <ul>
-        <!-- Basic mailto link -->
-        <li><a href="mailto:instructor@example.com">Send an Email (Basic)</a></li>
-        
-        <!-- Pre-filled subject and body using URL encoding (%20 = space) -->
+        <!-- Basic Email Link -->
         <li>
-            <a href="mailto:instructor@example.com?subject=Course%20Question&body=Hello%20Professor,">
-                Send Email with Pre-filled Subject &amp; Body
+            <a href="mailto:admissions@example.edu">
+                Email Admissions Office (Basic)
             </a>
         </li>
 
-        <!-- Bonus: Telephone link for mobile devices -->
-        <li><a href="tel:+911234567890">Call Department (+91 12345-67890)</a></li>
+        <!-- Email Link with Pre-filled Subject, CC, and Body -->
+        <li>
+            <a href="mailto:hod.cs@example.edu?cc=advisor@example.edu&subject=Lab%20Schedule%20Query&body=Respected%20Sir%2C%0A%0AI%20have%20a%20question%20regarding%20the%20timetable.">
+                Email Department Head with Subject &amp; Body
+            </a>
+        </li>
     </ul>
 
     <hr>
 
     <!-- 4. IMAGE LINKS -->
     <h2>4. Image Links</h2>
-    <p>Click the image below to open the W3C HTML Validator in a new tab:</p>
-    
-    <!-- Wrap an <img> tag inside an <a> tag to make the image clickable -->
-    <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer" title="Click to validate HTML">
-        <img src="
+    <p>Wrapping an <code>&lt;img&gt;</code> inside an <code>&lt;a&gt;</code> tag turns the image into a clickable link:</p>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Visit MDN HTML Documentation">
+        <img src="https://picsum.photos/id/0/360/160" 
+             alt="Laptop displaying web development workspace" 
+             title="Click to open MDN HTML Documentation"
+             width="360" 
+             height="160">
+    </a>
+
+    <!-- Spacer box to demonstrate same-page vertical jumping -->
+    <div class="spacer">
+        <p><em>Scroll down or click "Jump to Bottom Section" above to test the internal anchor link...</em></p>
+    </div>
+
+    <!-- TARGET ELEMENT FOR SAME-PAGE ANCHOR -->
+    <footer id="bottom-section">
+        <h3>Bottom Section (<code>id="bottom-section"</code>)</h3>
+        <p>You navigated directly to this section using <code>href="#bottom-section"</code>.</p>
+        <p><a href="#top">&uarr; Back to Top</a></p>
+    </footer>
+
+</body>
+
+</html>
