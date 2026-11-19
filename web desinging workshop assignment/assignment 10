@@ -60,4 +60,26 @@
     <p>Displays the browser's built-in audio player with play, pause, scrub, and volume controls:</p>
     
     <audio controls preload="metadata">
-        <source src="
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+        Your browser does not support the HTML5 audio tag.
+    </audio>
+
+    <hr>
+
+    <!-- 4. EMBEDDING A YOUTUBE VIDEO (<iframe>) -->
+    <h2>4. YouTube Video (&lt;iframe&gt;)</h2>
+    <p>External video platforms like YouTube are embedded using an <code>&lt;iframe&gt;</code> pointing to the <code>/embed/VIDEO_ID</code> URL:</p>
+    
+    <iframe width="700" 
+            height="394" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+
+</body>
+
+</html>
