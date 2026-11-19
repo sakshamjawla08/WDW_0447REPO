@@ -78,3 +78,37 @@
             
             <!-- 4. ALT TEXT: Describes the meaning/context of the image, not "image of..." -->
             <figure>
+                <img src="https://picsum.photos/id/1/600/250" 
+                     alt="Developer typing HTML code on a laptop at a wooden desk" 
+                     width="600" 
+                     height="250">
+                <figcaption>Meaningful alt text conveys visual context to screen readers.</figcaption>
+            </figure>
+
+            <!-- Decorative images use an empty alt="" so screen readers skip them -->
+            <img src="https://via.placeholder.com/600x10/cbd5e1/cbd5e1" alt="">
+        </section>
+
+        <section id="tutorials">
+            <h2>2. ARIA Labels for Non-Text Controls</h2>
+            <p>When a button or input lacks visible text, use <code>aria-label</code> or <code>aria-labelledby</code>:</p>
+
+            <!-- ARIA LABEL ON FORM & BUTTON: Provides accessible names for icon-only controls -->
+            <form role="search" aria-label="Site Search">
+                <input type="search" aria-label="Search articles" placeholder="Search...">
+                <button type="submit" aria-label="Submit search">&#128269;</button>
+            </form>
+
+            <h3>Sub-section Heading (h3)</h3>
+            <p>Notice how headings step down logically from <code>&lt;h1&gt;</code> &rarr; <code>&lt;h2&gt;</code> &rarr; <code>&lt;h3&gt;</code> without skipping levels.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Accessible Web Demo</p>
+    </footer>
+
+</body>
+
+</html>

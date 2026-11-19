@@ -66,4 +66,19 @@
     <p>
         The <abbr title="World Wide Web Consortium">W3C</abbr> maintains standards for 
         <abbr title="HyperText Markup Language">HTML</abbr> and 
-        <abbr title="Cascading Style Sheets">CSS</
+        <abbr title="Cascading Style Sheets">CSS</abbr>, which are transmitted over 
+        <abbr title="Hypertext Transfer Protocol Secure">HTTPS</abbr>.
+    </p>
+
+    <hr>
+
+    <!-- BONUS: DEFINING INSTANCE (<dfn>) -->
+    <h2>5. Defining Terms (&lt;dfn&gt;)</h2>
+    <p>Used to mark the exact moment a new technical term is being defined in a sentence:</p>
+    <p>
+        <dfn><abbr title="Application Programming Interface">API</abbr></dfn> is a set of rules that allows different software applications to communicate with each other.
+    </p>
+
+</body>
+
+</html>
